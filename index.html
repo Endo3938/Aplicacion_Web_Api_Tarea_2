@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+
+    <title>Anime Obrador</title>
+
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    
+    <link rel="shortcut icon" href="img/amlo-hokage.jpg" type="image/x-icon">
+
+    <script src="app.js"></script>
+
+</head>
+
+<body>
+
+    <img style="display: block; margin: 0 auto" src="img/logo-anime.png">
+
+    <div class="container">
+
+        <div style="text-align: center; ">
+
+            <h1 style="color: Black; font-family: Cooper Black;">¡Bienvenido a nuestra página de anime!</h1>
+            
+            <hr><br>
+
+            <h3 style="color: #212F3C ; font-size:20px ; font-family: 'Comic Sans MS';">¿Qué deseas buscar?</h3>
+
+
+
+            <select style="display:visible;" name="type" id="type" onchange="onTypeComboChanged()">
+
+                <option value="anime">Anime</option>
+                <option value="person">Persona</option>
+
+            </select>
+
+            <br><br>
+
+            <input type="text" id="query" name="query">
+
+            <br> <br>
+
+            <button class="btn btn-info" onclick="find()">Buscar</button>
+
+            <br><br>
+
+            <h3 style="color: #212F3C ; font-size:20px ; font-family: 'Comic Sans MS';">Filtrar resultados : </h3>
+
+            <select name="filter" id="filter" onchange="onFilterComboChanged()">
+
+                <option value="">Ninguno</option>
+                <option value="g">Todas las edades (G)</option>
+                <option value="pg">Niños (PG)</option>
+                <option value="pg13">Adolescentes (PG-13)</option>
+                <option value="r17">Mayores de edad (R)</option>
+                <option value="r">Desnudez Leve (R+)</option>
+                <option value="rx">XXX (Rx)</option>
+
+            </select>
+
+
+            <div>
+
+
+            </div>
+
+
+        </div>
+
+        <br><br>
+
+
+        <div id="divHead">
+
+            <div id="countDiv"></div>
+
+            <div id="results"></div>
+
+        </div>
+
+        <br> <br>
+
+
+        <div style="text-align: right;">
+
+            <button style="display:none;" id="btnBack" onclick="back()" class="btn btn-danger">
+
+                << </button> <button style="display:none;" id="btnNext" onclick="next()" class="btn btn-primary"> >>
+            
+                </button>
+
+            <br> <br>
+
+        </div>
+
+
+</body>
+
+</html>
