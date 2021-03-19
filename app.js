@@ -18,12 +18,14 @@ function onTypeComboChanged() {
 
     if (document.getElementById("type").value == "anime") {
 
-        document.getElementById("filter").setAttribute("style", "display:visible;")
+        document.getElementById("filter").setAttribute("style", "display:visible;") ;
+        document.getElementById("filtro").setAttribute("style", "display:visible;")
     }
 
     if (document.getElementById("type").value == "person") {
 
         document.getElementById("filter").setAttribute("style", "display:none;")
+        document.getElementById("filtro").setAttribute("style", "display:none;")
     }
 
 }
